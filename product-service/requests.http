@@ -1,0 +1,58 @@
+### 1. Crear un nuevo producto (POST)
+# Este endpoint debe devolver un estado 201 Created y el producto creado con su nuevo ID.
+POST http://localhost:8081/api/products
+Content-Type: application/json
+
+{
+    "name": "Teclado bonito",
+    "price": 100,
+    "stock": 10,
+    "active": true
+}
+
+### 1. Crear un nuevo producto (POST)
+# Este endpoint debe devolver un estado 201 Created y el producto creado con su nuevo ID.
+POST http://localhost:8081/api/products
+Content-Type: application/json
+
+{
+    "name": "Mouse ergonómico",
+    "price": 200,
+    "stock": 20,
+    "active": true
+}
+
+### 1. Crear un nuevo producto (POST)
+# Este endpoint debe devolver un estado 201 Created y el producto creado con su nuevo ID.
+POST http://localhost:8081/api/products
+Content-Type: application/json
+
+{
+    "name": "Monitor LED",
+    "price": 300,
+    "stock": 30,
+    "active": false
+}
+
+### 2. Obtener todos los productos (GET)
+# Después de crear uno o más productos, esta petición debería devolver una lista con ellos.
+GET http://localhost:8081/api/products
+
+
+### 3. Obtener un producto por su ID (GET)
+# Reemplaza el '1' con el ID del producto que creaste en la primera petición.
+# Como H2 es una base de datos en memoria, el primer producto que crees casi siempre tendrá el ID 1.
+GET http://localhost:8081/api/products/2
+
+### 4. Obtener un producto que no existe (GET)
+# Esta petición debería devolver un error 404 Not Found.
+GET http://localhost:8081/api/products/999
+
+### 5. Verificar disponibilidad de productos (POST)
+# Primero, asegúrate de haber creado algunos productos con la petición 1.
+# Pasamos una lista de IDs en el cuerpo de la petición.
+POST http://localhost:8081/api/products/check-availability
+Content-Type: application/json
+
+[1, 2, 3, 99]
+

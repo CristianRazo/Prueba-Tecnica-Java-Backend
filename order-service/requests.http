@@ -1,0 +1,52 @@
+### 1. Crear un pedido VÁLIDO (productos con stock)
+# Reemplaza los productId con IDs que SÍ existen en tu product-service.
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+
+{
+    "customerName": "Juan Perez",
+    "customerEmail": "juan.perez@example.com",
+    "items": [
+        {
+            "productId": 1,
+            "quantity": 1,
+            "unitPrice": 10
+        },
+        {
+            "productId": 2,
+            "quantity": 2,
+            "unitPrice": 20
+        }
+    ]
+}
+
+### 2. Intentar crear un pedido INVÁLIDO (producto sin stock o inexistente)
+# Usa un productId que sepas que no existe, como 999.
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+
+{
+    "customerName": "Maria Lopez",
+    "customerEmail": "maria.lopez@example.com",
+    "items": [
+        {
+            "productId": 1,
+            "quantity": 1,
+            "unitPrice": 99.99
+        },
+        {
+            "productId": 999,
+            "quantity": 1,
+            "unitPrice": 10.00
+        }
+    ]
+}
+
+### 3. Obtener todos los pedidos (GET)
+# Después de crear uno o más pedidos, esta petición debería devolver una lista con ellos.
+GET http://localhost:8082/api/orders
+
+### 4. Obtener un pedido por su ID (GET)
+# Reemplaza el '1' con el ID del pedido que creaste en la primera petición.
+# Como H2 es una base de datos en memoria, el primer pedido que crees casi siempre tendrá el ID 1.
+GET http://localhost:8082/api/orders/2

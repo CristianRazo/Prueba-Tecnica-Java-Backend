@@ -59,6 +59,14 @@ java -jar order-service/target/order-service-0.0.1-SNAPSHOT.jar
 
 En la raiz del proyecto se incluyen archivos start-services para levantar los servicios automaticamente
 
+Windows 
+Ejecutar el script
+
+Linux/Mac
+abrir la carpeta del proyecto en terminal 
+chmod +x start-services.sh && chmod +x product-service/mvnw && chmod +x order-service/mvnw
+
+
 ## 🌐 URLs de Acceso
 
 ### Servicios

@@ -18,6 +18,12 @@ La solución está implementada con una **arquitectura de microservicios**, comp
 - **Lombok**
 - **Swagger (OpenAPI)**
 
+
+Clonar Repositorio
+
+git clone https://github.com/CristianRazo/Prueba-Tecnica-Java-Backend
+cd Prueba-Tecnica-Java-Backend
+
 ## 🚀 Instrucciones(Instalacion Manual)
 
 ### Requisitos Previos
@@ -47,6 +53,8 @@ cd ..
 
 # 2. Construir el Order Service
 (cd order-service && ./mvnw clean package)
+
+##############################
 
 # 3. Ejecutar java jar 
 

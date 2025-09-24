@@ -31,7 +31,7 @@ public class OrderController {
         content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = Order.class),
             examples = @ExampleObject(name = "Pedido creado",
-                value = "{\n  \"id\": 1001,\n  \"customerName\": \"Juan Pérez\",\n  \"customerEmail\": \"juan.perez@example.com\",\n  \"orderDate\": \"2025-09-22T13:34:33.926Z\",\n  \"status\": \"CONFIRMED\",\n  \"totalAmount\": 199.99,\n  \"items\": [ { \n    \"id\": 10, \n    \"productId\": 1, \n    \"quantity\": 2, \n    \"unitPrice\": 99.99 \n  } ]\n}")))
+                value = "{\n \"customerName\": \"Juan Pérez\",\n  \"customerEmail\": \"juan.perez@example.com\",\n  \"orderDate\": \"2025-09-22T13:34:33.926Z\",\n  \"status\": \"CONFIRMED\",\n  \"totalAmount\": 199.99,\n  \"items\": [ { \n    \"id\": 10, \n    \"productId\": 1, \n    \"quantity\": 2, \n    \"unitPrice\": 99.99 \n  } ]\n}")))
     @ApiResponse(responseCode = "400", description = "Solicitud inválida o stock insuficiente",
         content = @Content(mediaType = "application/json",
             examples = @ExampleObject(name = "Error",

@@ -32,7 +32,7 @@ public class ProductController {
         content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = Product.class),
             examples = @ExampleObject(name = "Producto creado",
-                value = "{\n  \"id\": 1,\n  \"name\": \"Teclado\",\n  \"price\": 100.0,\n  \"stock\": 10,\n  \"active\": true\n}")))
+                value = "{\n  \"name\": \"Teclado\",\n  \"price\": 100.0,\n  \"stock\": 10,\n  \"active\": true\n}")))
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product nuevoProducto = productService.createProduct(product);

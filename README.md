@@ -91,7 +91,7 @@ chmod +x start-services.sh && chmod +x product-service/mvnw && chmod +x order-se
 - **Product Service**: http://localhost:8081
 - **Order Service**: http://localhost:8082
 
-### 📖 Documentación Swagger
+### 📖 Documentación Swagger (NO USAR PARA PROBAR TIENE UN ERROR DE CONFIGURACION / USAR POSTMAN)
 - **Product Service**: http://localhost:8081/swagger-ui/index.html
 - **Order Service**: http://localhost:8082/swagger-ui/index.html
 

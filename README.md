@@ -101,7 +101,7 @@ chmod +x start-services.sh && chmod +x product-service/mvnw && chmod +x order-se
 - **Order Service**: http://localhost:8082/h2-console
   - JDBC URL: `jdbc:h2:mem:orderdb`
 
-## 💡 Ejemplos de Uso (cURL)(Se puede usar Swagger para reralizar las consultas) 
+## 💡 Ejemplos de Uso (cURL)(Se puede usar Postman para reralizar las consultas) 
 
 ### Product Service
 
